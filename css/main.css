@@ -16,13 +16,7 @@
   --work-overlay-color: rgba(47, 48, 58, 0.8);
   --backdrop-color: rgba(0, 0, 0, 0.2);
   --modal-btn-hover: #188ce8;
-  --main-margin: 30px;
-  --secondary-margin: 50px;
-  --main-title-size: 16px;
-  --main-text-size: 14px;
-  --small-margin: 10px;
-  --main-border-radius: 4px;
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --primary-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 p,
@@ -54,7 +48,6 @@ img {
 body {
   padding-top: 80px;
   font-family: "Roboto", sans-serif;
-  letter-spacing: 0.03em;
   color: var(--primary-text-color);
   background-color: var(--primary-bg-color);
 }
@@ -77,35 +70,36 @@ body {
 }
 
 .features__title, .works__title, .team__title, .clients__title, .projects__title {
-  margin-bottom: var(--secondary-margin);
+  margin-bottom: 50px;
   text-align: center;
-  color: var(--title-text-color);
-  font-weight: 700;
   font-size: 36px;
-  line-height: 1.17;
+  font-weight: 700;
+  line-height: 1.16667;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
 }
 
 .modal__button, .hero__button, .subscription__button {
   width: 200px;
-  height: var(--secondary-margin);
+  height: 50px;
   font-family: inherit;
+  font-size: 16px;
   font-weight: 700;
-  font-size: var(--main-title-size);
-  line-height: 1.87;
+  line-height: 1.875;
   letter-spacing: 0.06em;
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
   border-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: var(--main-border-radius);
+  border-radius: 4px;
   cursor: pointer;
-  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
+  transition: color var(--primary-animation), background-color var(--primary-animation);
 }
 
 .site-nav__link,
 .contacts__link, .logo, .projects__link, .address__map, .address__link {
   text-decoration: none;
-  transition: color 250ms var(--timing-function);
+  transition: color var(--primary-animation);
 }
 
 .site-nav__link:hover,
@@ -125,7 +119,7 @@ body {
 }
 
 .socials__item:not(:first-child) {
-  margin-left: var(--small-margin);
+  margin-left: 10px;
 }
 
 .team__socials .socials__link {
@@ -139,7 +133,7 @@ body {
 
 .team__socials .socials__icon {
   fill: var(--team-social-icon-color);
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--primary-animation);
 }
 
 .footer__socials .socials__link {
@@ -157,7 +151,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color var(--primary-animation);
 }
 
 .socials__link:hover, .socials__link:focus {
@@ -173,7 +167,7 @@ body {
   height: 100vh;
   background-color: var(--backdrop-color);
   opacity: 1;
-  transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+  transition: opacity var(--primary-animation), visibility var(--primary-animation);
 }
 
 .backdrop.is-hidden {
@@ -187,7 +181,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
+  transition: transform var(--primary-animation), opacity var(--primary-animation);
   min-width: 528px;
   min-height: 581px;
   padding: 40px 40px;
@@ -214,7 +208,7 @@ body {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--primary-animation);
 }
 
 .close__button:hover, .close__button:focus {
@@ -223,8 +217,9 @@ body {
 
 .modal__title {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.15;
+  letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 12px;
   color: var(--title-text-color);
@@ -246,8 +241,9 @@ body {
 
 .modal__label {
   font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16667;
   letter-spacing: 0.01em;
-  line-height: 1.17;
   margin-bottom: 4px;
 }
 
@@ -255,13 +251,14 @@ body {
   width: 100%;
   height: 40px;
   padding: 11px 12px 11px 42px;
-  color: var(--title-text-color);
-  font-size: var(--main-text-size);
-  line-height: 1.14;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.14286;
   letter-spacing: 0.01em;
+  color: var(--title-text-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: border-color 250ms var(--timing-function);
+  transition: border-color var(--primary-animation);
 }
 
 .modal__input.comment {
@@ -280,7 +277,7 @@ body {
   fill: var(--title-text-color);
   left: 12px;
   top: 50%;
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--primary-animation);
 }
 
 .modal__input:focus {
@@ -299,7 +296,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--main-text-size);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71429;
+  letter-spacing: 0.03em;
+  font-size: 14px;
   line-height: 1.71;
 }
 
@@ -307,7 +308,7 @@ body {
   margin-right: 8px;
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
-  transition: background-color 250ms var(--timing-function), border-color 250ms var(--timing-function);
+  transition: background-color var(--primary-animation), border-color var(--primary-animation);
 }
 
 .modal__checkbox:checked ~ .modal__checkbox__icon {
@@ -362,7 +363,7 @@ body {
 
 .site-nav__item:not(:last-child),
 .contacts__item:not(:last-child) {
-  margin-right: var(--secondary-margin);
+  margin-right: 50px;
 }
 
 .site-nav__link,
@@ -370,9 +371,9 @@ body {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  font-size: 14px;
   font-weight: 500;
-  font-size: var(--main-text-size);
-  line-height: 1.14;
+  line-height: 1.14286;
   letter-spacing: 0.02em;
 }
 
@@ -408,8 +409,8 @@ body {
 
 .contacts__icon {
   fill: var(--primary-text-color);
-  margin-right: var(--small-margin);
-  transition: fill 250ms var(--timing-function);
+  margin-right: 10px;
+  transition: fill var(--primary-animation);
 }
 
 .contacts__link:hover .contacts__icon,
@@ -418,10 +419,11 @@ body {
 }
 
 .logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  font-weight: 700;
+  line-height: 1.19231;
+  letter-spacing: 0.03em;
+  font-family: "Raleway", sans-serif;
   color: var(--accent-color);
 }
 
@@ -454,18 +456,18 @@ body {
 
 .hero__title {
   margin: 0 auto;
-  font-weight: 900;
   font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
+  font-weight: 900;
+  line-height: 1.36364;
   letter-spacing: 0.06em;
+  text-align: center;
   text-transform: uppercase;
   max-width: 696px;
   color: var(--primary-bg-color);
 }
 
 .hero__button {
-  margin-top: var(--main-margin);
+  margin-top: 30px;
 }
 
 .hero__button:hover, .hero__button:focus {
@@ -480,12 +482,12 @@ body {
 
 .features__list {
   display: flex;
-  margin-left: calc(-1 * var(--main-margin));
+  margin-left: calc(-1 * 30px);
 }
 
 .features__item {
-  flex-basis: calc(100% / 4 - var(--main-margin));
-  margin-left: var(--main-margin);
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
 }
 
 .features__icon {
@@ -494,22 +496,25 @@ body {
   justify-content: center;
   height: 120px;
   background-color: var(--secondary-bg-color);
-  border-radius: var(--main-border-radius);
-  margin-bottom: var(--main-margin);
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 .features__name {
-  color: var(--title-text-color);
+  font-size: 14px;
   font-weight: 700;
-  font-size: var(--main-text-size);
-  line-height: 1.14;
+  line-height: 1.14286;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: var(--small-margin);
+  color: var(--title-text-color);
+  margin-bottom: 10px;
 }
 
 .features__desc {
-  font-size: var(--main-text-size);
-  line-height: 1.71;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71429;
+  letter-spacing: 0.03em;
 }
 
 .works {
@@ -519,14 +524,14 @@ body {
 
 .works__list {
   display: flex;
-  margin-left: calc(-1 * var(--main-margin));
+  margin-left: calc(-1 * 30px);
 }
 
 .works__item {
   position: relative;
   overflow: hidden;
-  flex-basis: calc(100% / 3 - var(--main-margin));
-  margin-left: var(--main-margin);
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
 }
 
 .works__label {
@@ -541,11 +546,12 @@ body {
 }
 
 .works__name {
-  color: var(--primary-bg-color);
+  font-size: 14px;
   font-weight: 700;
-  font-size: var(--main-text-size);
-  line-height: 1.14;
+  line-height: 1.14286;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
+  color: var(--primary-bg-color);
 }
 
 .team {
@@ -561,28 +567,30 @@ body {
 
 .team__item {
   flex-basis: calc(100% / 4 - 30px);
-  margin-left: var(--main-margin);
+  margin-left: 30px;
   background-color: var(--primary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
 .team__content {
-  padding-top: var(--main-margin);
-  padding-bottom: var(--main-margin);
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team__desc, .team__name {
   text-align: center;
   margin-bottom: 16px;
-  font-size: var(--main-title-size);
-  line-height: 1.19;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.1875;
+  letter-spacing: 0.03em;
 }
 
 .team__name {
-  margin-bottom: var(--small-margin);
-  color: var(--title-text-color);
   font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--title-text-color);
 }
 
 .clients {
@@ -600,7 +608,7 @@ body {
 }
 
 .clients__item:not(:first-child) {
-  margin-left: var(--main-margin);
+  margin-left: 30px;
 }
 
 .clients__link {
@@ -610,8 +618,8 @@ body {
   width: 100%;
   height: 100%;
   border: 1px solid var(--team-social-icon-color);
-  border-radius: var(--main-border-radius);
-  transition: border-color 250ms var(--timing-function);
+  border-radius: 4px;
+  transition: border-color var(--primary-animation);
 }
 
 .clients__link:hover, .clients__link:focus {
@@ -620,7 +628,7 @@ body {
 
 .clients__icon {
   fill: var(--team-social-icon-color);
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--primary-animation);
 }
 
 .clients__link:hover .clients__icon,
@@ -632,7 +640,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--secondary-margin);
+  margin-bottom: 50px;
 }
 
 .filters__item:not(:first-child) {
@@ -642,16 +650,16 @@ body {
 .filters__button {
   padding: 6px 22px;
   font-family: inherit;
+  font-size: 16px;
   font-weight: 500;
-  font-size: var(--main-title-size);
-  line-height: 1.62;
+  line-height: 1.625;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
   border-color: transparent;
-  border-radius: var(--main-border-radius);
+  border-radius: 4px;
   cursor: pointer;
-  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+  transition: color var(--primary-animation), background-color var(--primary-animation), box-shadow var(--primary-animation);
 }
 
 .filters__button:hover, .filters__button:focus {
@@ -674,13 +682,13 @@ body {
 
 .projects__item {
   flex-basis: calc(100% / 3 - 30px);
-  margin-top: var(--main-margin);
-  margin-left: var(--main-margin);
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 .projects__link {
   display: block;
-  transition: box-shadow 250ms var(--timing-function);
+  transition: box-shadow var(--primary-animation);
 }
 
 .projects__link:hover, .projects__link:focus {
@@ -700,7 +708,7 @@ body {
   height: 100%;
   background-color: var(--project-overlay-color);
   transform: translateY(100%);
-  transition: transform 250ms var(--timing-function);
+  transition: transform var(--primary-animation);
 }
 
 .projects__link:hover .projects__overlay,
@@ -724,16 +732,18 @@ body {
 
 .projects__name {
   margin-bottom: 4px;
-  font-weight: 700;
   font-size: 18px;
+  font-weight: 700;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
 }
 
 .projects__desc {
-  font-size: var(--main-title-size);
-  line-height: 1.87;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
 
@@ -763,8 +773,10 @@ footer {
 
 .address__list {
   font-style: normal;
-  font-size: var(--main-text-size);
-  line-height: 1.71;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71429;
+  letter-spacing: 0.03em;
 }
 
 .address__item:not(:last-child) {
@@ -780,11 +792,12 @@ footer {
 }
 
 .footer__subtitle {
-  color: var(--primary-bg-color);
+  font-size: 14px;
   font-weight: 700;
-  font-size: var(--main-text-size);
-  line-height: 1.14;
+  line-height: 1.14286;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
+  color: var(--primary-bg-color);
   margin-bottom: 20px;
 }
 
@@ -801,8 +814,10 @@ footer {
 .subscriprion__input {
   height: 50px;
   width: 358px;
-  font-size: var(--main-title-size);
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.25;
+  letter-spacing: 0.03em;
   color: var(--footer-contacts-color);
   padding-left: 16px;
   background-color: transparent;
@@ -820,7 +835,7 @@ footer {
 .subscription__icon {
   margin-left: 10px;
   fill: var(--primary-bg-color);
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--primary-animation);
 }
 
 .subscription__button:hover .subscription__icon,

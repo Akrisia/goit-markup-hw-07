@@ -18,7 +18,7 @@
 
 .team__item {
   flex-basis: calc(100% / 4 - 30px);
-  margin-left: var(--main-margin);
+  margin-left: 30px;
 
   background-color: var(--primary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -27,21 +27,20 @@
 }
 
 .team__content {
-  padding-top: var(--main-margin);
-  padding-bottom: var(--main-margin);
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team__desc {
   text-align: center;
   margin-bottom: 16px;
 
-  font-size: var(--main-title-size);
-  line-height: 1.19;
+  @include font(16px, 400, 19px);
 }
 
 .team__name {
   @extend .team__desc;
-  margin-bottom: var(--small-margin);
-  color: var(--title-text-color);
   font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--title-text-color);
 }

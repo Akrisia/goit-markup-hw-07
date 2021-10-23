@@ -1,6 +1,6 @@
 .projects__filters {
   @include centeredFlex();
-  margin-bottom: var(--secondary-margin);
+  margin-bottom: 50px;
 }
 
 .filters__item:not(:first-child) {
@@ -11,20 +11,17 @@
   padding: 6px 22px;
 
   font-family: inherit;
-  font-weight: 500;
-  font-size: var(--main-title-size);
-  line-height: 1.62;
-  letter-spacing: 0.03em;
+  @include font(16px, 500, 26px);
 
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
   border-color: transparent;
-  border-radius: var(--main-border-radius);
+  border-radius: 4px;
 
   cursor: pointer;
-  transition: color 250ms var(--timing-function),
-    background-color 250ms var(--timing-function),
-    box-shadow 250ms var(--timing-function);
+  transition: color var(--primary-animation),
+    background-color var(--primary-animation),
+    box-shadow var(--primary-animation);
 
   &:hover,
   &:focus {

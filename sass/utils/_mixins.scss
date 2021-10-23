@@ -4,12 +4,17 @@
   justify-content: center;
 }
 
+@mixin font($fs, $fw, $lh, $ls: 0.03em) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh / $fs;
+  letter-spacing: $ls;
+}
+
 @mixin subtitle($color: var(--title-text-color)) {
-  color: $color;
-  font-weight: 700;
-  font-size: var(--main-text-size);
-  line-height: 1.14;
+  @include font(14px, 700, 16px);
   text-transform: uppercase;
+  color: $color;
 }
 
 @mixin section($padding-bottom: 94px) {

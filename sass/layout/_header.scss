@@ -33,7 +33,7 @@
 
 .site-nav__item:not(:last-child),
 .contacts__item:not(:last-child) {
-  margin-right: var(--secondary-margin);
+  margin-right: 50px;
 }
 
 .site-nav__link,
@@ -43,10 +43,7 @@
   padding-top: 32px;
   padding-bottom: 32px;
 
-  font-weight: 500;
-  font-size: var(--main-text-size);
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font(14px, 500, 16px, 0.02em);
 }
 
 .site-nav__link {
@@ -83,8 +80,8 @@
 
 .contacts__icon {
   fill: var(--primary-text-color);
-  margin-right: var(--small-margin);
-  transition: fill 250ms var(--timing-function);
+  margin-right: 10px;
+  transition: fill var(--primary-animation);
 
   .contacts__link:hover &,
   .contacts__link:focus & {

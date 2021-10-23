@@ -28,8 +28,7 @@ footer {
 
 .address__list {
   font-style: normal;
-  font-size: var(--main-text-size);
-  line-height: 1.71;
+  @include font(14px, 400, 24px);
 }
 
 .address__item:not(:last-child) {
@@ -65,8 +64,7 @@ footer {
   height: 50px;
   width: 358px;
 
-  font-size: var(--main-title-size);
-  line-height: 1.25;
+  @include font(16px, 400, 20px);
   color: var(--footer-contacts-color);
 
   padding-left: 16px;
@@ -85,7 +83,7 @@ footer {
   margin-left: 10px;
   fill: var(--primary-bg-color);
 
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--primary-animation);
 
   .subscription__button:hover &,
   .subscription__button:focus & {

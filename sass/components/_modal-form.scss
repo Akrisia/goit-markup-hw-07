@@ -1,8 +1,5 @@
 .modal__title {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.15;
-
+  @include font(20px, 700, 23px);
   text-align: center;
   margin-bottom: 12px;
 
@@ -24,10 +21,7 @@
 }
 
 .modal__label {
-  font-size: 12px;
-  letter-spacing: 0.01em;
-  line-height: 1.17;
-
+  @include font(12px, 400, 14px, 0.01em);
   margin-bottom: 4px;
 }
 
@@ -36,15 +30,13 @@
   height: 40px;
   padding: 11px 12px 11px 42px;
 
+  @include font(14px, 400, 16px, 0.01em);
   color: var(--title-text-color);
-  font-size: var(--main-text-size);
-  line-height: 1.14;
-  letter-spacing: 0.01em;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  transition: border-color 250ms var(--timing-function);
+  transition: border-color var(--primary-animation);
 
   &.comment {
     height: 120px;
@@ -65,7 +57,7 @@
   left: 12px;
   top: 50%;
 
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--primary-animation);
 }
 
 .modal__input:focus {
@@ -82,7 +74,8 @@
 
 .modal__checkbox__label {
   @include centeredFlex();
-  font-size: var(--main-text-size);
+  @include font(14px, 400, 24px);
+  font-size: 14px;
   line-height: 1.71;
 }
 
@@ -92,8 +85,8 @@
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
 
-  transition: background-color 250ms var(--timing-function),
-    border-color 250ms var(--timing-function);
+  transition: background-color var(--primary-animation),
+    border-color var(--primary-animation);
 
   .modal__checkbox:checked ~ & {
     background-color: var(--accent-color);

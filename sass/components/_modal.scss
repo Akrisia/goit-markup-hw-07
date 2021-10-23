@@ -3,8 +3,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms var(--timing-function),
-    opacity 250ms var(--timing-function);
+  transition: transform var(--primary-animation),
+    opacity var(--primary-animation);
 
   min-width: 528px;
   min-height: 581px;
@@ -39,7 +39,7 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--primary-animation);
 
   &:hover,
   &:focus {

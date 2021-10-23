@@ -12,12 +12,12 @@
 
 .features__list {
   display: flex;
-  margin-left: calc(-1 * var(--main-margin));
+  margin-left: calc(-1 * 30px);
 }
 
 .features__item {
-  flex-basis: calc(100% / 4 - var(--main-margin));
-  margin-left: var(--main-margin);
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
 }
 
 .features__icon {
@@ -25,17 +25,16 @@
 
   height: 120px;
   background-color: var(--secondary-bg-color);
-  border-radius: var(--main-border-radius);
+  border-radius: 4px;
 
-  margin-bottom: var(--main-margin);
+  margin-bottom: 30px;
 }
 
 .features__name {
   @include subtitle();
-  margin-bottom: var(--small-margin);
+  margin-bottom: 10px;
 }
 
 .features__desc {
-  font-size: var(--main-text-size);
-  line-height: 1.71;
+  @include font(14px, 400, 24px);
 }

@@ -5,39 +5,34 @@
 }
 
 %title {
-  margin-bottom: var(--secondary-margin);
+  margin-bottom: 50px;
   text-align: center;
 
+  @include font(36px, 700, 42px);
   color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
 }
 
 %button {
   width: 200px;
-  height: var(--secondary-margin);
+  height: 50px;
 
   font-family: inherit;
-  font-weight: 700;
-  font-size: var(--main-title-size);
-  line-height: 1.87;
-  letter-spacing: 0.06em;
+  @include font(16px, 700, 30px, 0.06em);
 
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
   border-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: var(--main-border-radius);
+  border-radius: 4px;
 
   cursor: pointer;
-  transition: color 250ms var(--timing-function),
-    background-color 250ms var(--timing-function);
+  transition: color var(--primary-animation),
+    background-color var(--primary-animation);
 }
 
 %link {
   text-decoration: none;
-  transition: color 250ms var(--timing-function);
+  transition: color var(--primary-animation);
 
   &:hover,
   &:focus {

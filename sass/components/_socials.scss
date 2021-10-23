@@ -8,7 +8,7 @@
   height: 44px;
 
   &:not(:first-child) {
-    margin-left: var(--small-margin);
+    margin-left: 10px;
   }
 }
 
@@ -24,7 +24,7 @@
 
   .socials__icon {
     fill: var(--team-social-icon-color);
-    transition: fill 250ms var(--timing-function);
+    transition: fill var(--primary-animation);
   }
 }
 
@@ -43,7 +43,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color var(--primary-animation);
 
   &:hover,
   &:focus {

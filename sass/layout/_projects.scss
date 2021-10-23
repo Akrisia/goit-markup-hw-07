@@ -20,14 +20,14 @@
 
 .projects__item {
   flex-basis: calc(100% / 3 - 30px);
-  margin-top: var(--main-margin);
-  margin-left: var(--main-margin);
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 .projects__link {
   @extend %link;
   display: block;
-  transition: box-shadow 250ms var(--timing-function);
+  transition: box-shadow var(--primary-animation);
 
   &:hover,
   &:focus {
@@ -51,7 +51,7 @@
   background-color: var(--project-overlay-color);
   transform: translateY(100%);
 
-  transition: transform 250ms var(--timing-function);
+  transition: transform var(--primary-animation);
 
   .projects__link:hover &,
   .projects__link:focus & {
@@ -77,17 +77,11 @@
 .projects__name {
   margin-bottom: 4px;
 
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-
+  @include font(18px, 700, 36px, 0.06em);
   color: var(--title-text-color);
 }
 
 .projects__desc {
-  font-size: var(--main-title-size);
-  line-height: 1.87;
-
+  @include font(16px, 400, 30px);
   color: var(--primary-text-color);
 }
