@@ -1,0 +1,35 @@
+.features-section {
+  padding-bottom: 0px;
+}
+
+.features {
+  display: flex;
+  margin-left: calc(-1 * var(--main-margin));
+}
+
+.feature-item {
+  flex-basis: calc(100% / 4 - var(--main-margin));
+  margin-left: var(--main-margin);
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background-color: var(--secondary-bg-color);
+  border-radius: var(--main-border-radius);
+
+  margin-bottom: var(--main-margin);
+}
+
+.feature-title {
+  margin-bottom: var(--small-margin);
+
+  color: var(--title-text-color);
+}
+
+.feature-desc {
+  font-size: var(--main-text-size);
+  line-height: 1.71;
+}

@@ -1,0 +1,9 @@
+.link {
+  text-decoration: none;
+  transition: color 250ms var(--timing-function);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+}

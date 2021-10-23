@@ -1,0 +1,41 @@
+.team {
+  background-color: var(--secondary-bg-color);
+}
+
+.members {
+  display: flex;
+  margin-left: calc(-1 * var(--main-margin));
+}
+
+.member-item {
+  flex-basis: calc(100% / 4 - var(--main-margin));
+  margin-left: var(--main-margin);
+
+  background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.member-content {
+  padding-top: var(--main-margin);
+  padding-bottom: var(--main-margin);
+}
+
+.member-title,
+.member-desc {
+  text-align: center;
+
+  font-size: var(--main-title-size);
+  line-height: 1.19;
+}
+
+.member-title {
+  margin-bottom: var(--small-margin);
+  color: var(--title-text-color);
+  font-weight: 500;
+}
+
+.member-desc {
+  margin-bottom: 16px;
+}
