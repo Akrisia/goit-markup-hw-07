@@ -10,19 +10,19 @@
   @extend %title;
 }
 
-.works__list {
+.works-list {
   display: flex;
   margin-left: calc(-1 * 30px);
 }
 
-.works__item {
+.works-list__item {
   position: relative;
   overflow: hidden;
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
 }
 
-.works__label {
+.works-list__label {
   @include centeredFlex();
 
   position: absolute;
@@ -33,6 +33,6 @@
   background-color: var(--work-overlay-color);
 }
 
-.works__name {
+.works-list__name {
   @include subtitle($color: var(--primary-bg-color));
 }

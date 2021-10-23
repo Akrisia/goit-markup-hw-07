@@ -51,7 +51,7 @@
 
   position: relative;
 
-  &.current {
+  &_current {
     color: var(--accent-color);
 
     &::after {
