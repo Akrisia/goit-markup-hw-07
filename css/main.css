@@ -668,12 +668,12 @@ body {
 .projects__list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-1 * var(--main-margin));
-  margin-left: calc(-1 * var(--main-margin));
+  margin-top: calc(-1 * 30px);
+  margin-left: calc(-1 * 30px);
 }
 
 .projects__item {
-  flex-basis: calc(100% / 3 - var(--main-margin));
+  flex-basis: calc(100% / 3 - 30px);
   margin-top: var(--main-margin);
   margin-left: var(--main-margin);
 }
@@ -722,7 +722,7 @@ body {
   border-bottom: 1px solid var(--border-portfolio);
 }
 
-.projects__title {
+.projects__name {
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
