@@ -1,14 +1,23 @@
 .team {
+  @include section();
   background-color: var(--secondary-bg-color);
 }
 
-.members {
-  display: flex;
-  margin-left: calc(-1 * var(--main-margin));
+.team__container {
+  @extend %container;
 }
 
-.member-item {
-  flex-basis: calc(100% / 4 - var(--main-margin));
+.team__title {
+  @extend %title;
+}
+
+.team__list {
+  display: flex;
+  margin-left: calc(-1 * 30px);
+}
+
+.team__item {
+  flex-basis: calc(100% / 4 - 30px);
   margin-left: var(--main-margin);
 
   background-color: var(--primary-bg-color);
@@ -17,25 +26,22 @@
   border-radius: 0px 0px 4px 4px;
 }
 
-.member-content {
+.team__content {
   padding-top: var(--main-margin);
   padding-bottom: var(--main-margin);
 }
 
-.member-title,
-.member-desc {
+.team__desc {
   text-align: center;
+  margin-bottom: 16px;
 
   font-size: var(--main-title-size);
   line-height: 1.19;
 }
 
-.member-title {
+.team__name {
+  @extend .team__desc;
   margin-bottom: var(--small-margin);
   color: var(--title-text-color);
   font-weight: 500;
-}
-
-.member-desc {
-  margin-bottom: 16px;
 }

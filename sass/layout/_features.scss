@@ -1,18 +1,26 @@
-.features-section {
-  padding-bottom: 0px;
+.features {
+  @include section($padding-bottom: 0px);
 }
 
-.features {
+.features__container {
+  @extend %container;
+}
+
+.features__title {
+  @extend %title;
+}
+
+.features__list {
   display: flex;
   margin-left: calc(-1 * var(--main-margin));
 }
 
-.feature-item {
+.features__item {
   flex-basis: calc(100% / 4 - var(--main-margin));
   margin-left: var(--main-margin);
 }
 
-.feature-icon {
+.features__icon {
   @include centeredFlex();
 
   height: 120px;
@@ -22,13 +30,12 @@
   margin-bottom: var(--main-margin);
 }
 
-.feature-title {
+.features__name {
+  @include subtitle();
   margin-bottom: var(--small-margin);
-
-  color: var(--title-text-color);
 }
 
-.feature-desc {
+.features__desc {
   font-size: var(--main-text-size);
   line-height: 1.71;
 }

@@ -1,3 +1,19 @@
+%container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+%title {
+  margin-bottom: var(--secondary-margin);
+  text-align: center;
+
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+
 %button {
   width: 200px;
   height: var(--secondary-margin);

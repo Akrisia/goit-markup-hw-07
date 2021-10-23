@@ -1,16 +1,28 @@
 .works {
+  @include section();
+}
+
+.works__container {
+  @extend %container;
+}
+
+.works__title {
+  @extend %title;
+}
+
+.works__list {
   display: flex;
   margin-left: calc(-1 * var(--main-margin));
 }
 
-.work-item {
+.works__item {
   position: relative;
   overflow: hidden;
   flex-basis: calc(100% / 3 - var(--main-margin));
   margin-left: var(--main-margin);
 }
 
-.work-label {
+.works__label {
   @include centeredFlex();
 
   position: absolute;
@@ -21,6 +33,6 @@
   background-color: var(--work-overlay-color);
 }
 
-.work-title {
-  color: var(--primary-bg-color);
+.works__name {
+  @include subtitle($color: var(--primary-bg-color));
 }

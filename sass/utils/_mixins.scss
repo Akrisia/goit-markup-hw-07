@@ -3,3 +3,16 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin subtitle($color: var(--title-text-color)) {
+  color: $color;
+  font-weight: 700;
+  font-size: var(--main-text-size);
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+@mixin section($padding-bottom: 94px) {
+  padding-top: 94px;
+  padding-bottom: $padding-bottom;
+}

@@ -1,9 +1,9 @@
-.social-list {
+.socials {
   display: flex;
   justify-content: center;
 }
 
-.social-item {
+.socials__item {
   width: 44px;
   height: 44px;
 
@@ -12,39 +12,41 @@
   }
 }
 
-.social-link {
+.team__socials {
+  .socials__link {
+    background-color: var(--primary-bg-color);
+
+    &:hover .socials__icon,
+    &:focus .socials__icon {
+      fill: var(--primary-bg-color);
+    }
+  }
+
+  .socials__icon {
+    fill: var(--team-social-icon-color);
+    transition: fill 250ms var(--timing-function);
+  }
+}
+
+.footer__socials {
+  .socials__link {
+    background-color: var(--footer-social-bg-color);
+  }
+
+  .socials__icon {
+    fill: var(--primary-bg-color);
+  }
+}
+
+.socials__link {
   @include centeredFlex();
   width: 100%;
   height: 100%;
   border-radius: 50%;
   transition: background-color 250ms var(--timing-function);
 
-  &.member {
-    background-color: var(--primary-bg-color);
-
-    &:hover .social-icon,
-    &:focus .social-icon {
-      fill: var(--primary-bg-color);
-    }
-  }
-
-  &.footer {
-    background-color: var(--footer-social-bg-color);
-  }
-
   &:hover,
   &:focus {
     background-color: var(--accent-color);
-  }
-}
-
-.social-icon {
-  &.member {
-    fill: var(--team-social-icon-color);
-    transition: fill 250ms var(--timing-function);
-  }
-
-  &.footer {
-    fill: var(--primary-bg-color);
   }
 }
