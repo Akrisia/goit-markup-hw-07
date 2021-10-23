@@ -36,11 +36,12 @@
 }
 
 .hero-btn {
+  @extend %button;
   margin-top: var(--main-margin);
-}
 
-.hero-btn:hover,
-.hero-btn:focus {
-  color: var(--accent-color);
-  background-color: var(--primary-bg-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    background-color: var(--primary-bg-color);
+  }
 }

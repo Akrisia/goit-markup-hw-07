@@ -1,5 +1,3 @@
-/* шапка */
-
 .header {
   position: fixed;
   z-index: 1;
@@ -16,26 +14,6 @@
   display: flex;
   align-items: center;
 }
-
-/* логотип */
-
-.logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--accent-color);
-}
-
-.header-studio {
-  color: var(--logo-studio-header-color);
-}
-
-.footer-studio {
-  color: var(--primary-bg-color);
-}
-
-/* навигация сайта и контакты в шапке */
 
 .navigation {
   margin-left: 93px;
@@ -59,6 +37,7 @@
 
 .site-nav-link,
 .contact-link {
+  @extend %link;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -73,30 +52,29 @@
   color: var(--title-text-color);
 
   position: relative;
-}
 
-.site-nav-link.current {
-  color: var(--accent-color);
-}
+  &.current {
+    color: var(--accent-color);
 
-.site-nav-link.current::after {
-  content: "";
+    &::after {
+      content: "";
 
-  position: absolute;
-  left: 0;
-  bottom: -1px;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
 
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+  }
 }
 
 .contact-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centeredFlex();
+
   width: 100%;
   height: 100%;
   color: var(--primary-text-color);
@@ -106,9 +84,9 @@
   fill: var(--primary-text-color);
   margin-right: var(--small-margin);
   transition: fill 250ms var(--timing-function);
-}
 
-.contact-link:hover .contact-icon,
-.contact-link:focus .contact-icon {
-  fill: var(--accent-color);
+  .contact-link:hover &,
+  .contact-link:focus & {
+    fill: var(--accent-color);
+  }
 }

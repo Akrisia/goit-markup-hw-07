@@ -34,10 +34,12 @@ footer {
 }
 
 .address-map {
+  @extend %link;
   color: var(--primary-bg-color);
 }
 
 .address-link {
+  @extend %link;
   color: var(--footer-contacts-color);
 }
 
@@ -73,9 +75,7 @@ footer {
 
 .subscription-data {
   right: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centeredFlex();
 }
 
 .subscription-icon {
@@ -83,15 +83,19 @@ footer {
   fill: var(--primary-bg-color);
 
   transition: fill 250ms var(--timing-function);
+
+  .subscription-btn:hover &,
+  .subscription-btn:focus & {
+    fill: var(--accent-color);
+  }
 }
 
-.subscription-btn:hover,
-.subscription-btn:focus {
-  color: var(--accent-color);
-  background-color: var(--primary-bg-color);
-}
+.subscription-btn {
+  @extend %button;
 
-.subscription-btn:hover .subscription-icon,
-.subscription-btn:focus .subscription-icon {
-  fill: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    background-color: var(--primary-bg-color);
+  }
 }

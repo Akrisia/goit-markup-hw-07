@@ -11,9 +11,8 @@
 }
 
 .work-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centeredFlex();
+
   position: absolute;
   bottom: 0;
 

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -82,17 +81,7 @@ body {
   padding-bottom: 94px;
 }
 
-.link {
-  text-decoration: none;
-  transition: color 250ms var(--timing-function);
-}
-
-.link:hover,
-.link:focus {
-  color: var(--accent-color);
-}
-
-.btn {
+.modal-btn, .hero-btn, .subscription-btn {
   width: 200px;
   height: var(--secondary-margin);
   font-family: inherit;
@@ -107,6 +96,18 @@ body {
   border-radius: var(--main-border-radius);
   cursor: pointer;
   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
+}
+
+.site-nav-link,
+.contact-link, .logo, .project-link, .address-map, .address-link {
+  text-decoration: none;
+  transition: color 250ms var(--timing-function);
+}
+
+.site-nav-link:hover,
+.contact-link:hover, .logo:hover, .project-link:hover, .address-map:hover, .address-link:hover, .site-nav-link:focus,
+.contact-link:focus, .logo:focus, .project-link:focus, .address-map:focus, .address-link:focus {
+  color: var(--accent-color);
 }
 
 .section-title {
@@ -153,11 +154,6 @@ body {
   background-color: var(--primary-bg-color);
 }
 
-.social-icon.member {
-  fill: var(--team-social-icon-color);
-  transition: fill 250ms var(--timing-function);
-}
-
 .social-link.member:hover .social-icon,
 .social-link.member:focus .social-icon {
   fill: var(--primary-bg-color);
@@ -167,13 +163,17 @@ body {
   background-color: var(--footer-social-bg-color);
 }
 
-.social-icon.footer {
-  fill: var(--primary-bg-color);
+.social-link:hover, .social-link:focus {
+  background-color: var(--accent-color);
 }
 
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--accent-color);
+.social-icon.member {
+  fill: var(--team-social-icon-color);
+  transition: fill 250ms var(--timing-function);
+}
+
+.social-icon.footer {
+  fill: var(--primary-bg-color);
 }
 
 .backdrop {
@@ -229,12 +229,10 @@ body {
   transition: fill 250ms var(--timing-function);
 }
 
-.close-btn:hover,
-.close-btn:focus {
+.close-btn:hover, .close-btn:focus {
   fill: var(--accent-color);
 }
 
-/* форма модального окна */
 .modal-title {
   font-size: 20px;
   font-weight: bold;
@@ -309,11 +307,6 @@ body {
   margin-bottom: 30px;
 }
 
-.modal-checkbox:checked ~ .modal-checkbox-icon {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
 .modal-checkbox-label {
   display: flex;
   align-items: center;
@@ -329,6 +322,11 @@ body {
   transition: background-color 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
 
+.modal-checkbox:checked ~ .modal-checkbox-icon {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
 .agreement-link {
   color: var(--accent-color);
 }
@@ -338,13 +336,11 @@ body {
   margin: 0 auto;
 }
 
-.modal-btn:hover,
-.modal-btn:focus {
+.modal-btn:hover, .modal-btn:focus {
   color: var(--primary-bg-color);
   background-color: var(--modal-btn-hover);
 }
 
-/* шапка */
 .header {
   position: fixed;
   z-index: 1;
@@ -361,24 +357,6 @@ body {
   align-items: center;
 }
 
-/* логотип */
-.logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--accent-color);
-}
-
-.header-studio {
-  color: var(--logo-studio-header-color);
-}
-
-.footer-studio {
-  color: var(--primary-bg-color);
-}
-
-/* навигация сайта и контакты в шапке */
 .navigation {
   margin-left: 93px;
 }
@@ -451,6 +429,22 @@ body {
   fill: var(--accent-color);
 }
 
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--accent-color);
+}
+
+.header-studio {
+  color: var(--logo-studio-header-color);
+}
+
+.footer-studio {
+  color: var(--primary-bg-color);
+}
+
 .hero {
   margin: 0 auto;
   padding-top: 200px;
@@ -486,8 +480,7 @@ body {
   margin-top: var(--main-margin);
 }
 
-.hero-btn:hover,
-.hero-btn:focus {
+.hero-btn:hover, .hero-btn:focus {
   color: var(--accent-color);
   background-color: var(--primary-bg-color);
 }
@@ -616,8 +609,7 @@ body {
   transition: border-color 250ms var(--timing-function);
 }
 
-.client-link:hover,
-.client-link:focus {
+.client-link:hover, .client-link:focus {
   border-color: var(--accent-color);
 }
 
@@ -633,8 +625,8 @@ body {
 
 .filters {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-bottom: var(--secondary-margin);
 }
 
@@ -657,8 +649,7 @@ body {
   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
 
-.filter-btn:hover,
-.filter-btn:focus {
+.filter-btn:hover, .filter-btn:focus {
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -682,8 +673,7 @@ body {
   transition: box-shadow 250ms var(--timing-function);
 }
 
-.project-link:hover,
-.project-link:focus {
+.project-link:hover, .project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -819,14 +809,13 @@ footer {
   transition: fill 250ms var(--timing-function);
 }
 
-.subscription-btn:hover,
-.subscription-btn:focus {
-  color: var(--accent-color);
-  background-color: var(--primary-bg-color);
-}
-
 .subscription-btn:hover .subscription-icon,
 .subscription-btn:focus .subscription-icon {
   fill: var(--accent-color);
+}
+
+.subscription-btn:hover, .subscription-btn:focus {
+  color: var(--accent-color);
+  background-color: var(--primary-bg-color);
 }
 /*# sourceMappingURL=main.css.map */

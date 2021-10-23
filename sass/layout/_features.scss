@@ -13,9 +13,8 @@
 }
 
 .feature-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centeredFlex();
+
   height: 120px;
   background-color: var(--secondary-bg-color);
   border-radius: var(--main-border-radius);
