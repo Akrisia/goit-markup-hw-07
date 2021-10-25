@@ -16,8 +16,3 @@
   text-transform: uppercase;
   color: $color;
 }
-
-@mixin section($padding-bottom: 94px) {
-  padding-top: 94px;
-  padding-bottom: $padding-bottom;
-}

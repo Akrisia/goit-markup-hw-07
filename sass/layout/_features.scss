@@ -1,26 +1,18 @@
+.section--features {
+  padding-bottom: 0px;
+}
+
 .features {
-  @include section($padding-bottom: 0px);
-}
-
-.features__container {
-  @extend %container;
-}
-
-.features__title {
-  @extend %title;
-}
-
-.features-list {
   display: flex;
   margin-left: calc(-1 * 30px);
 }
 
-.features-list__item {
+.features__item {
   flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
 }
 
-.features-list__icon {
+.features__icon {
   @include centeredFlex();
 
   height: 120px;
@@ -30,11 +22,11 @@
   margin-bottom: 30px;
 }
 
-.features-list__name {
+.features__title {
   @include subtitle();
   margin-bottom: 10px;
 }
 
-.features-list__desc {
+.features__desc {
   @include font(14px, 400, 24px);
 }

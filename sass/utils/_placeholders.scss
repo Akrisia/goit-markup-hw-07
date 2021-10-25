@@ -1,17 +1,3 @@
-%container {
-  width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-%title {
-  margin-bottom: 50px;
-  text-align: center;
-
-  @include font(36px, 700, 42px);
-  color: var(--title-text-color);
-}
-
 %button {
   width: 200px;
   height: 50px;

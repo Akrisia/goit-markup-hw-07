@@ -1,13 +1,13 @@
-.filters-list {
+.filters {
   @include centeredFlex();
   margin-bottom: 50px;
 }
 
-.filters-list__item:not(:first-child) {
+.filters__item:not(:first-child) {
   margin-left: 8px;
 }
 
-.filters-list__button {
+.filters__button {
   padding: 6px 22px;
 
   font-family: inherit;

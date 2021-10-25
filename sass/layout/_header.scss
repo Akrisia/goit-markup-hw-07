@@ -1,4 +1,4 @@
-.header {
+header {
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -10,8 +10,7 @@
   background-color: var(--primary-bg-color);
 }
 
-.header__container {
-  @extend %container;
+.container--header {
   display: flex;
   align-items: center;
 
@@ -51,7 +50,7 @@
 
   position: relative;
 
-  &_current {
+  &--current {
     color: var(--accent-color);
 
     &::after {

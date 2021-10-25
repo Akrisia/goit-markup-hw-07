@@ -15,8 +15,7 @@
   background-color: var(--footer-bg-color);
 }
 
-.hero__container {
-  @extend %container;
+.container--hero {
   display: flex;
   flex-direction: column;
   align-items: center;

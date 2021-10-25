@@ -12,23 +12,17 @@
   }
 }
 
-.team-list__socials {
+.team {
   .socials__link {
     background-color: var(--primary-bg-color);
-
-    &:hover .socials__icon,
-    &:focus .socials__icon {
-      fill: var(--primary-bg-color);
-    }
   }
 
   .socials__icon {
     fill: var(--team-social-icon-color);
-    transition: fill var(--primary-animation);
   }
 }
 
-.footer__socials {
+footer {
   .socials__link {
     background-color: var(--footer-social-bg-color);
   }
@@ -48,5 +42,14 @@
   &:hover,
   &:focus {
     background-color: var(--accent-color);
+  }
+}
+
+.socials__icon {
+  transition: fill var(--primary-animation);
+
+  .socials__link:hover &,
+  .socials__link:focus & {
+    fill: var(--primary-bg-color);
   }
 }

@@ -1,28 +1,16 @@
 .works {
-  @include section();
-}
-
-.works__container {
-  @extend %container;
-}
-
-.works__title {
-  @extend %title;
-}
-
-.works-list {
   display: flex;
   margin-left: calc(-1 * 30px);
 }
 
-.works-list__item {
+.works__item {
   position: relative;
   overflow: hidden;
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
 }
 
-.works-list__label {
+.works__label {
   @include centeredFlex();
 
   position: absolute;
@@ -33,6 +21,6 @@
   background-color: var(--work-overlay-color);
 }
 
-.works-list__name {
+.works__title {
   @include subtitle($color: var(--primary-bg-color));
 }
